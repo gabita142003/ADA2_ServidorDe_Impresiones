@@ -26,7 +26,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 	private JTextField TítuloImpresionL;
 	private JTextField textPrioridad;
 	private JTextField textContenido;
-	private JTextField textField;
+	private JTextField FondoAzulMarino;
 	
 	
 	/**
@@ -176,15 +176,15 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(textContenido);
 		textContenido.setColumns(10);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\amycr\\Downloads\\lovepik-technological-background-image_402010515.jpg"));
-		lblNewLabel_1.setBounds(0, -5, 756, 77);
-		contentPane.add(lblNewLabel_1);
+		JLabel FondoAzul = new JLabel("Imagen Fodno");
+		FondoAzul.setIcon(new ImageIcon("C:\\Users\\amycr\\Downloads\\FondoAzul.jpg"));
+		FondoAzul.setBounds(0, 0, 756, 72);
+		contentPane.add(FondoAzul);
 		
-		textField = new JTextField();
-		textField.setBackground(new Color(98, 176, 255));
-		textField.setBounds(0, 72, 756, 519);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		FondoAzulMarino = new JTextField();
+		FondoAzulMarino.setBackground(new Color(98, 176, 255));
+		FondoAzulMarino.setBounds(0, 68, 756, 523);
+		contentPane.add(FondoAzulMarino);
+		FondoAzulMarino.setColumns(10);
 	}
 }
