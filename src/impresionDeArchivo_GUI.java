@@ -127,9 +127,9 @@ public class impresionDeArchivo_GUI extends JFrame {
 		comboFormato.setBounds(84, 439, 224, 22);
 		contentPane.add(comboFormato);
 		
-		JButton btCrearArchivo = new JButton("Crear archivo");
-		btCrearArchivo.setBounds(117, 505, 131, 23);
-		contentPane.add(btCrearArchivo);
+		JButton btnCrearArchivo = new JButton("Crear archivo");
+		btnCrearArchivo.setBounds(117, 505, 131, 23);
+		contentPane.add(btnCrearArchivo);
 		
 		textArchivoP = new JTextField();
 		textArchivoP.setText("ARCHIVO PENDIENTES");
@@ -153,9 +153,9 @@ public class impresionDeArchivo_GUI extends JFrame {
 		JtlistImpresionL.setBounds(543, 150, 173, 222);
 		contentPane.add(JtlistImpresionL);
 		
-		JButton btImprimir = new JButton("Imprimir archivo");
-		btImprimir.setBounds(440, 404, 229, 23);
-		contentPane.add(btImprimir);
+		JButton btnImprimir = new JButton("Imprimir archivo");
+		btnImprimir.setBounds(440, 404, 229, 23);
+		contentPane.add(btnImprimir);
 		
 		JButton btnMostrarImpresiones = new JButton("Mostrar archivos pendientes");
 		btnMostrarImpresiones.setBounds(440, 439, 229, 23);

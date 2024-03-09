@@ -1,4 +1,5 @@
 
-public class archivo {
+public class archivo  {
+	
 
 }
