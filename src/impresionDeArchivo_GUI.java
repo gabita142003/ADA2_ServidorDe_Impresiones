@@ -13,20 +13,20 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.JList;
+import javax.swing.ImageIcon;
 
 public class impresionDeArchivo_GUI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField FondoNoranja;
 	private JTextField textNomArchivo;
 	private JTextField textFecha;
 	private JTextField textUsuario;
-	private JTextField textArchivoP;
-	private JTextField textImpresionL;
+	private JTextField TítuloArchivoP;
+	private JTextField TítuloImpresionL;
 	private JTextField textPrioridad;
 	private JTextField textContenido;
-	private JTextField FondoAmarillo;
+	private JTextField textField;
 	
 	
 	/**
@@ -50,7 +50,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 	 */
 	public impresionDeArchivo_GUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 772, 578);
+		setBounds(100, 100, 772, 630);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -58,20 +58,17 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lbCrearArchivo = new JLabel("Crear Archivo");
+		lbCrearArchivo.setBackground(new Color(98, 176, 255));
 		lbCrearArchivo.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lbCrearArchivo.setBounds(88, 104, 138, 25);
+		lbCrearArchivo.setBounds(102, 104, 147, 25);
 		contentPane.add(lbCrearArchivo);
 		
 		JLabel lblNewLabel = new JLabel("SERVIDOR DE IMPRESIONES");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setBackground(new Color(255, 255, 255));
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
-		lblNewLabel.setBounds(211, -5, 330, 72);
+		lblNewLabel.setBounds(227, 11, 340, 61);
 		contentPane.add(lblNewLabel);
-		
-		FondoNoranja = new JTextField();
-		FondoNoranja.setBackground(new Color(255, 150, 100));
-		FondoNoranja.setBounds(0, 0, 756, 87);
-		contentPane.add(FondoNoranja);
-		FondoNoranja.setColumns(10);
 		
 		JLabel lbNombre = new JLabel("Nombre del archivo:");
 		lbNombre.setBounds(20, 151, 113, 14);
@@ -128,37 +125,41 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(comboFormato);
 		
 		JButton btnCrearArchivo = new JButton("Crear archivo");
-		btnCrearArchivo.setBounds(117, 505, 131, 23);
+		btnCrearArchivo.setBounds(123, 527, 147, 40);
 		contentPane.add(btnCrearArchivo);
 		
-		textArchivoP = new JTextField();
-		textArchivoP.setText("ARCHIVO PENDIENTES");
-		textArchivoP.setHorizontalAlignment(SwingConstants.CENTER);
-		textArchivoP.setColumns(10);
-		textArchivoP.setBounds(350, 124, 176, 20);
-		contentPane.add(textArchivoP);
+		TítuloArchivoP = new JTextField();
+		TítuloArchivoP.setFont(new Font("Tahoma", Font.BOLD, 14));
+		TítuloArchivoP.setBackground(new Color(0, 128, 255));
+		TítuloArchivoP.setText("ARCHIVO PENDIENTES");
+		TítuloArchivoP.setHorizontalAlignment(SwingConstants.CENTER);
+		TítuloArchivoP.setColumns(10);
+		TítuloArchivoP.setBounds(368, 83, 350, 35);
+		contentPane.add(TítuloArchivoP);
 		
-		textImpresionL = new JTextField();
-		textImpresionL.setText("IMPRESIONES LISTAS");
-		textImpresionL.setHorizontalAlignment(SwingConstants.CENTER);
-		textImpresionL.setColumns(10);
-		textImpresionL.setBounds(543, 124, 176, 20);
-		contentPane.add(textImpresionL);
+		TítuloImpresionL = new JTextField();
+		TítuloImpresionL.setFont(new Font("Tahoma", Font.BOLD, 14));
+		TítuloImpresionL.setBackground(new Color(0, 128, 255));
+		TítuloImpresionL.setText("IMPRESIONES LISTAS");
+		TítuloImpresionL.setHorizontalAlignment(SwingConstants.CENTER);
+		TítuloImpresionL.setColumns(10);
+		TítuloImpresionL.setBounds(368, 279, 350, 36);
+		contentPane.add(TítuloImpresionL);
 		
 		JList JlistArchivosP = new JList();
-		JlistArchivosP.setBounds(350, 150, 173, 222);
+		JlistArchivosP.setBounds(368, 129, 350, 139);
 		contentPane.add(JlistArchivosP);
 		
 		JList JtlistImpresionL = new JList();
-		JtlistImpresionL.setBounds(543, 150, 173, 222);
+		JtlistImpresionL.setBounds(368, 334, 350, 148);
 		contentPane.add(JtlistImpresionL);
 		
 		JButton btnImprimir = new JButton("Imprimir archivo");
-		btnImprimir.setBounds(440, 404, 229, 23);
+		btnImprimir.setBounds(440, 503, 229, 30);
 		contentPane.add(btnImprimir);
 		
 		JButton btnMostrarImpresiones = new JButton("Mostrar archivos pendientes");
-		btnMostrarImpresiones.setBounds(440, 439, 229, 23);
+		btnMostrarImpresiones.setBounds(440, 544, 229, 36);
 		contentPane.add(btnMostrarImpresiones);
 		
 		JLabel lbPrioridad = new JLabel("Prioridad:");
@@ -175,10 +176,15 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(textContenido);
 		textContenido.setColumns(10);
 		
-		FondoAmarillo = new JTextField();
-		FondoAmarillo.setColumns(10);
-		FondoAmarillo.setBackground(new Color(250, 240, 207));
-		FondoAmarillo.setBounds(0, 78, 756, 461);
-		contentPane.add(FondoAmarillo);
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\amycr\\Downloads\\lovepik-technological-background-image_402010515.jpg"));
+		lblNewLabel_1.setBounds(0, -5, 756, 77);
+		contentPane.add(lblNewLabel_1);
+		
+		textField = new JTextField();
+		textField.setBackground(new Color(98, 176, 255));
+		textField.setBounds(0, 72, 756, 519);
+		contentPane.add(textField);
+		textField.setColumns(10);
 	}
 }
