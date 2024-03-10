@@ -229,7 +229,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 					 
 				 } else {
 					 // Mostrar mensaje si no hay archivos para imprimir en la cola
-			            JOptionPane.showMessageDialog(null, "Por el momento no se encuentra archivos agregados a la cola.");
+			            JOptionPane.showMessageDialog(null, "No se encuentran archivos agregados a la cola.");
 			    }
 		     }
 			
