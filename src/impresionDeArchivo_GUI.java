@@ -216,7 +216,13 @@ public class impresionDeArchivo_GUI extends JFrame {
 				//ver si la cola de archivos no está vacía
 				 if (!colaArchivos.isEmpty()) {  
 			
-				 }
+					 
+					 
+					 
+				 } else {
+					 // Mostrar mensaje si no hay archivos para imprimir en la cola
+			            JOptionPane.showMessageDialog(null, "Por el momento no se encuentra archivos agregados a la cola.");
+			    }
 		     }
 			
 		});
