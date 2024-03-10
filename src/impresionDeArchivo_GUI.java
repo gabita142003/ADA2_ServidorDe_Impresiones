@@ -19,6 +19,8 @@ import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.JList;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class impresionDeArchivo_GUI extends JFrame {
 
@@ -136,6 +138,12 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(comboFormato);
 		
 		JButton btnCrearArchivo = new JButton("Crear archivo");
+		btnCrearArchivo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+			}
+			
+		});
 		btnCrearArchivo.setBounds(123, 527, 147, 40);
 		contentPane.add(btnCrearArchivo);
 		
