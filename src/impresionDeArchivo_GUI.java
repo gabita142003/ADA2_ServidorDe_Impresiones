@@ -19,6 +19,8 @@ import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.JList;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class impresionDeArchivo_GUI extends JFrame {
 
@@ -32,6 +34,8 @@ public class impresionDeArchivo_GUI extends JFrame {
 	private JTextField textPrioridad;
 	private JTextField textContenido;
 	private JTextField FondoAzulMarino;
+    private JList JlistArchivosP;
+	private JList JtlistImpresionL;
 	//Modelos del combo box
 	public DefaultComboBoxModel comboTamaño = new DefaultComboBoxModel(); //Combo de tamaño archivo
     public DefaultComboBoxModel comboFormato = new DefaultComboBoxModel(); //combo del formato archivo
@@ -40,6 +44,7 @@ public class impresionDeArchivo_GUI extends JFrame {
     public  DefaultListModel modelImpresiones = new DefaultListModel();     // Jtlist de la lista de impresiones 
     //Cola
     Queue<archivo> colaArchivos = new PriorityQueue<archivo>();
+   
     /**
 	 * Launch the application.
 	 */
@@ -187,7 +192,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(textContenido);
 		textContenido.setColumns(10);
 		
-		JLabel FondoAzul = new JLabel("Imagen Fodno");
+		JLabel FondoAzul = new JLabel("Imagen Fondo");
 		FondoAzul.setIcon(new ImageIcon("C:\\Users\\amycr\\Downloads\\FondoAzul.jpg"));
 		FondoAzul.setBounds(0, 0, 756, 72);
 		contentPane.add(FondoAzul);
