@@ -158,6 +158,12 @@ public class impresionDeArchivo_GUI extends JFrame {
 			modelArchivo.addElement(NuevoArchivo.getNomArchivo() + "-" + "Creado el: " + NuevoArchivo.getFechaCrea() + "." + NuevoArchivo.getFormato());
 			
 			JlistArchivosP.setModel(modelArchivo);
+			
+			textNomArchivo.setText("");
+			textContenido.setText("");
+			textFecha.setText("");
+			textUsuario.setText("");
+			textPrioridad.setText("");
 			}
 			
 		});
