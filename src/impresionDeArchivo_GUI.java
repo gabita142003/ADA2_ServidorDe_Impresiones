@@ -215,9 +215,9 @@ public class impresionDeArchivo_GUI extends JFrame {
 				
 				
 				while (!colaArchivos.isEmpty()) {             
-					archivo archivoSeleccionado = colaArchivos.poll();             
-					modelArchivo.addElement(archivoSeleccionado.getNomArchivo() + " (" + archivoSeleccionado.getFormato() + ")");             
-					modelArchivo.removeElement(archivoSeleccionado.getNomArchivo()); 
+					archivo archivoImpreso = colaArchivos.poll();             
+					modelArchivo.addElement(archivoImpreso.getNomArchivo() + " (" + archivoImpreso.getFormato() + ")");             
+					modelArchivo.removeElement(archivoImpreso.getNomArchivo()); 
 				JOptionPane.showMessageDialog(btnNewButton,"La impresión ha sido exitosa!");	
 				}                  
 				if (colaArchivos.isEmpty()) {             
