@@ -140,6 +140,14 @@ public class impresionDeArchivo_GUI extends JFrame {
 		JButton btnCrearArchivo = new JButton("Crear archivo");
 		btnCrearArchivo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+			String NombreArchivo= textNomArchivo.getText();
+			String Contenido= textContenido.getText();
+			String Fecha= textFecha.getText();
+			String Usuario= textUsuario.getText();
+			String Formato= comboFormato.getSelectedItem().toString();
+			String Tamaño= comboTamaño.getSelectedItem().toString();
+			
+			
 			
 			}
 			
