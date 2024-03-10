@@ -63,14 +63,7 @@
     }
 	public void  setOrdenPrioridad(int ordenPrioridad) {
 	this.ordenDePrioridad=ordenPrioridad;
-	}
-
-	public int getOrdenDePrioridad() {
-				return ordenDePrioridad;
-    }
-	public void  setOrdenDePrioridad(int ordenPrioridad) {
-				this.ordenDePrioridad=ordenPrioridad;
-
+	
 	
 	 }
 
