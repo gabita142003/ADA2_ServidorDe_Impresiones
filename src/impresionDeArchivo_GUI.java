@@ -98,6 +98,14 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(lbFecha);
 		
 		textFecha = new JTextField();
+		textFecha.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+		
+				
+			}
+		});
 		textFecha.setColumns(10);
 		textFecha.setBounds(140, 258, 168, 20);
 		contentPane.add(textFecha);
