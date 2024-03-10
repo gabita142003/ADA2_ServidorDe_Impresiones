@@ -142,6 +142,14 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(JlistArchivosP);
 		
 		JList JtlistImpresionL = new JList();
+		JtlistImpresionL.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				
+				
+			}
+		});
 		JtlistImpresionL.setBounds(371, 315, 334, 147);
 		contentPane.add(JtlistImpresionL);
 		
