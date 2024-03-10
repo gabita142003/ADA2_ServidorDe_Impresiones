@@ -215,8 +215,12 @@ public class impresionDeArchivo_GUI extends JFrame {
 				
 				//ver si la cola de archivos no está vacía
 				 if (!colaArchivos.isEmpty()) {  
-			while (!colaArchivos.isEmpty()) {
-				  archivo archivoImpreso = colaArchivos.poll();
+			
+				while (!colaArchivos.isEmpty()) {
+				  
+					archivo archivoImpreso = colaArchivos.poll();
+				  modelImpresiones.addElement(archivoImpreso.getOrdenDePrioridad() + ".-"
+					+ archivoImpreso.getNomArchivo() + "." + archivoImpreso.getFormato());
 			}
 					 
 					 
