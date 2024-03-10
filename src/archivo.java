@@ -1,4 +1,4 @@
- public class archivo {
+ public class archivo implements Comparable <archivo> {
 	private String nomArchivo;
 	private String contenido;
 	private String nomUsuario;
@@ -58,13 +58,17 @@
 	public void setTamaño(String tamaño) {
 	this.tamaño = tamaño;
 	}
-	public int getOrdenPrioridad() {
+	public int getOrdenDePrioridad() {
 		return ordenDePrioridad;
     }
 	public void  setOrdenPrioridad(int ordenPrioridad) {
-	this.ordenDePrioridad=ordenPrioridad;
-	
-	
+	this.ordenDePrioridad=ordenDePrioridad;
+	}
+	public int compareTo(archivo nuevoArchivo) {
+	    // comparar archivos para mantener la cola ordenada para tales caso se uso el orden de prioridad 
+		// que va del 1 al 3.
+	    return Integer.compare(this.ordenDePrioridad, nuevoArchivo.getOrdenDePrioridad());
+	    
 	 }
 
 }
