@@ -148,7 +148,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 			String Tamaño= comboTamaño.getSelectedItem().toString();
 			int Prioridad= 	Integer.parseInt(textPrioridad.getText());
 			
-			
+			archivo NuevoArchivo= new archivo(NombreArchivo, Contenido, Fecha, Usuario, Formato, Tamaño, Prioridad);
 			
 			
 			}
