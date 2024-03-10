@@ -39,7 +39,8 @@ public class impresionDeArchivo_GUI extends JFrame {
     public DefaultComboBoxModel comboFormato = new DefaultComboBoxModel(); //combo del formato archivo
 	//Modelos del  Jtlist 
     public  DefaultListModel modelArchivo = new DefaultListModel();         //Jtlist de la lista de archivos 
-    public  DefaultListModel modelImpresiones = new DefaultListModel();     // Jtlist de la lista de impresiones 
+    public  DefaultListModel modelImpresiones = new DefaultListModel();// Jtlist de la lista de impresiones 
+    
     //Cola
     Queue<archivo> colaArchivos = new PriorityQueue<archivo>();
     /**
@@ -153,6 +154,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 			colaArchivos.add(NuevoArchivo);
 			modelArchivo.addElement(NuevoArchivo.getNomArchivo() + "-" + "Creado el: " + NuevoArchivo.getFechaCrea() + "." + NuevoArchivo.getFormato());
 			
+			JlistArchivosP.setModel(modelArchivo);
 			}
 			
 		});
