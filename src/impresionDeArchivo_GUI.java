@@ -223,7 +223,8 @@ public class impresionDeArchivo_GUI extends JFrame {
 					+ archivoImpreso.getNomArchivo() + "." + archivoImpreso.getFormato());
 			     
 				}JOptionPane.showMessageDialog(null, "La impresión a sido exitosa!");
-					 
+				
+				JtlistImpresionL.setModel(modelImpresiones);
 					 
 					 
 				 } else {
