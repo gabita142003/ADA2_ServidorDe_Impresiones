@@ -225,7 +225,13 @@ public class impresionDeArchivo_GUI extends JFrame {
 				
 				//ver si la cola de archivos no está vacía
 				 if (!colaArchivos.isEmpty()) {  
-			
+					 String mensajeConfirmacion = "¿Seguro de querer imprimir en orden los archivos?\n"
+				 +"Si haces esto, no se podrán ordenar los siguientes que agregues.\n"            
+				 + "Ingresa 'SI' para confirmar.";     
+				String entradaUsuario = JOptionPane.showInputDialog(null, mensajeConfirmacion, "Confirmar Impresión en Orden", JOptionPane.PLAIN_MESSAGE);     
+				if (entradaUsuario != null && entradaUsuario.equalsIgnoreCase("SI"))
+								 
+							
 				while (!colaArchivos.isEmpty()) {
 				  
 					archivo archivoImpreso = colaArchivos.poll();
