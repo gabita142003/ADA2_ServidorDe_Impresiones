@@ -28,9 +28,11 @@ public class impresionDeArchivo_GUI extends JFrame {
 	private JTextField textPrioridad;
 	private JTextField textContenido;
 	private JTextField FondoAzulMarino;
+	//Modelos del combo box
+	public DefaultComboBoxModel comboTamaño = new DefaultComboBoxModel(); //Combo de tamaño archivo
+    public DefaultComboBoxModel comboFormato = new DefaultComboBoxModel(); //combo del formato archivo
 	
-	
-	/**
+    /**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
