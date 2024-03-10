@@ -11,6 +11,7 @@ import java.awt.Font;
 import javax.swing.JTextPane;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.JList;
@@ -31,7 +32,10 @@ public class impresionDeArchivo_GUI extends JFrame {
 	//Modelos del combo box
 	public DefaultComboBoxModel comboTamaño = new DefaultComboBoxModel(); //Combo de tamaño archivo
     public DefaultComboBoxModel comboFormato = new DefaultComboBoxModel(); //combo del formato archivo
-	
+	//Modelos del  Jtlist 
+    public  DefaultListModel modelArchivo = new DefaultListModel();         //Jtlist de la lista de archivos 
+    public  DefaultListModel modelImpresiones = new DefaultListModel();     // Jtlist de la lista de impresiones 
+    
     /**
 	 * Launch the application.
 	 */
