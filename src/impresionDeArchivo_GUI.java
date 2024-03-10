@@ -8,6 +8,9 @@ import javax.swing.JTextField;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 import javax.swing.JTextPane;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
@@ -35,7 +38,8 @@ public class impresionDeArchivo_GUI extends JFrame {
 	//Modelos del  Jtlist 
     public  DefaultListModel modelArchivo = new DefaultListModel();         //Jtlist de la lista de archivos 
     public  DefaultListModel modelImpresiones = new DefaultListModel();     // Jtlist de la lista de impresiones 
-    
+    //Cola
+    Queue<archivo> colaArchivos = new PriorityQueue<archivo>();
     /**
 	 * Launch the application.
 	 */
