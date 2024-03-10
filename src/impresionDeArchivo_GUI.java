@@ -146,6 +146,8 @@ public class impresionDeArchivo_GUI extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
+				String archivoSeleccionado = JtlistImpresionL.getSelectedValue().toString();
+				JOptionPane.showMessageDialog (null, "Detalles de impresión \n " + archivoSeleccionado  );
 				
 				
 			}
