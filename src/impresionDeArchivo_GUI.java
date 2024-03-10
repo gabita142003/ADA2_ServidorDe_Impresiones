@@ -221,7 +221,8 @@ public class impresionDeArchivo_GUI extends JFrame {
 					archivo archivoImpreso = colaArchivos.poll();
 				  modelImpresiones.addElement(archivoImpreso.getOrdenDePrioridad() + ".-"
 					+ archivoImpreso.getNomArchivo() + "." + archivoImpreso.getFormato());
-			}
+			     
+				}JOptionPane.showMessageDialog(null, "La impresión a sido exitosa!");
 					 
 					 
 					 
