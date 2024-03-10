@@ -153,9 +153,9 @@ public class impresionDeArchivo_GUI extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				JOptionPane.showMessageDialog(null, "Favor de escribir: 1-Si el archvio es urgente. "
-						+ "2-Si el archivo es importante pero no tan urgente. "
-						+ "3- Programado para una fecha en especifica.");
+				JOptionPane.showMessageDialog(null, "Favor de escribir: \n1-Si el archvio es urgente. "
+						+ "\n2-Si el archivo es importante pero no tan urgente. "
+						+ "\n3- Programado para una fecha en especifica.");
 				
 			}
 		});
