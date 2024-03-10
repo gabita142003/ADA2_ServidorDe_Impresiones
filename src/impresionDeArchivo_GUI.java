@@ -160,9 +160,12 @@ public class impresionDeArchivo_GUI extends JFrame {
 								
 								JlistArchivosP.setModel(modelArchivo);
 								
+								//Se limpian los campos
+								textNomArchivo.setText("");
+								textContenido.setText("");
+								textFecha.setText("");
+								textUsuario.setText("");
 								
-								
-					
 							}
 						});
 				
