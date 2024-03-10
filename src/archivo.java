@@ -70,5 +70,10 @@
 	    return Integer.compare(this.ordenDePrioridad, nuevoArchivo.getOrdenDePrioridad());
 	    
 	 }
+	 @Override
+	 //para visualizar lo que se imprimira en los jtlist
+	    public String toString() {
+	        return nomArchivo + " - " + formato;
 
+ }
 }
