@@ -5,6 +5,9 @@
 	private String fechaCrea;
 	private String formato;
 	private String tamaño;
+	private int ordenDePrioridad; //Atributo que nos ayudara a mantener en orden la cola  
+	//Orden de prioridad: 1-Si el archvio es urgente ,2-Si el archivo es importante pero no tan urgente ,3- Programado para una fecha en especifica
+
 	
 	public archivo(String nomArchivo, String contenido, String nomUsuario, String fechaCrea, String formato, String tamaño) {
 		this.nomArchivo = nomArchivo;
@@ -53,7 +56,21 @@
 	}
 	public void setTamaño(String tamaño) {
 	this.tamaño = tamaño;
+	}
+	public int getOrdenPrioridad() {
+		return ordenDePrioridad;
+    }
+	public void  setOrdenPrioridad(int ordenPrioridad) {
+	this.ordenDePrioridad=ordenPrioridad;
+	}
 
+	public int getOrdenDePrioridad() {
+				return ordenDePrioridad;
+    }
+	public void  setOrdenDePrioridad(int ordenPrioridad) {
+				this.ordenDePrioridad=ordenPrioridad;
+
+	
 	 }
 
 }
