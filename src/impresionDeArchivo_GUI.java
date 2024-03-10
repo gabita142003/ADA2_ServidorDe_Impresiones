@@ -215,7 +215,9 @@ public class impresionDeArchivo_GUI extends JFrame {
 				
 				//ver si la cola de archivos no está vacía
 				 if (!colaArchivos.isEmpty()) {  
-			
+			while (!colaArchivos.isEmpty()) {
+				
+			}
 					 
 					 
 					 
