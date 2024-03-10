@@ -213,13 +213,18 @@ public class impresionDeArchivo_GUI extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				
 				while (!colaArchivos.isEmpty()) {             
 					archivo archivoSeleccionado = colaArchivos.poll();             
 					modelArchivo.addElement(archivoSeleccionado.getNomArchivo() + " (" + archivoSeleccionado.getFormato() + ")");             
-					modelArchivo.removeElement(archivoSeleccionado.getNomArchivo());         }                  
+					modelArchivo.removeElement(archivoSeleccionado.getNomArchivo()); 
+				JOptionPane.showMessageDialog(btnNewButton,"La impresión ha sido exitosa!");	
+				}                  
 				if (colaArchivos.isEmpty()) {             
 					JOptionPane.showMessageDialog(null, "No hay más archivos en la cola."); 
 				}
+				
+				
 			}
 		});
 		btnNewButton.setBounds(430, 494, 224, 35);
