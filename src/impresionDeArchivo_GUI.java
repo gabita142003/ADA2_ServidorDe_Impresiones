@@ -164,6 +164,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 			textFecha.setText("");
 			textUsuario.setText("");
 			textPrioridad.setText("");
+			
 			}
 			
 		});
