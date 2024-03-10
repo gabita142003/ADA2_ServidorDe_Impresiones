@@ -16,6 +16,7 @@
 		this.fechaCrea = fechaCrea;
 		this.formato = formato;
 		this.tamaño = tamaño;
+		this.ordenDePrioridad = ordenDePrioridad;
 
 	}
 	
