@@ -1,7 +1,7 @@
 
 
 import java.awt.EventQueue;
-
+ 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -15,11 +15,11 @@ import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+ 
 import java.util.PriorityQueue;
 import java.util.Queue;
 import javax.swing.event.ListSelectionListener;
-
+ 
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.SwingConstants;
 import java.awt.Font;
@@ -27,8 +27,9 @@ import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class impresionDeArchivo_GUI extends JFrame {
 
+public class impresionDeArchivo_GUI extends JFrame {
+ 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textNomArchivo;
@@ -41,8 +42,8 @@ public class impresionDeArchivo_GUI extends JFrame {
     public DefaultComboBoxModel comboFormato = new DefaultComboBoxModel(); //combo del formato archivo
    
     // Jtlist (crear y imprimir archivo)
-    public  DefaultListModel modelArchivo = new DefaultListModel(); //Jtlist de la lista de archivos 
-    public  DefaultListModel modelImpresiones = new DefaultListModel();// Jtlist de la lista de impresiones 
+    public  DefaultListModel modelArchivo = new DefaultListModel(); //Jtlist de la lista de archivos
+    public  DefaultListModel modelImpresiones = new DefaultListModel();// Jtlist de la lista de impresiones
     private JTextField textContenido;
     
     
@@ -66,7 +67,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 			}
 		});
 	}
-
+ 
 	/**
 	 * Create the frame.
 	 */
@@ -75,7 +76,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 		setBounds(100, 100, 754, 627);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
+ 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
@@ -141,6 +142,37 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(btnMostrarImpresiones);
 		
 		JButton btCrearArchivo = new JButton("Crear archivo");
+		btCrearArchivo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Declaracion de atributos en el boton
+								String NombreArchivo= textNomArchivo.getText();
+								String Contenido= textContenido.getText();
+								String Usuario= textUsuario.getText();
+								String FechaCreacion= textFecha.getText();
+								String Formato= comboFormato.getSelectedItem().toString();
+								String Tamaño= comboTamaño.getSelectedItem().toString();
+								int Prioridad= Integer.parseInt(textPrioridad.getText());
+								
+								//Crear objeto Archivo
+								archivo NuevoArchivo= new archivo(NombreArchivo,Contenido, Usuario, FechaCreacion, Formato,Tamaño, Prioridad);
+								
+								
+								//Se manda el objeto a la cola y al modelo del jtlist
+								colaArchivos.add(NuevoArchivo);	
+								modelArchivo.addElement(NuevoArchivo.getNomArchivo() +  "-" +  "Creado el: "  + NuevoArchivo.getFechaCrea() + "." + NuevoArchivo.getFormato());
+								
+								JlistArchivosP.setModel(modelArchivo);
+								
+								//Se limpian los campos
+								textNomArchivo.setText("");
+								textContenido.setText("");
+								textFecha.setText("");
+								textUsuario.setText("");
+								
+							}
+						});
+				
+							
 		btCrearArchivo.setBounds(105, 475, 179, 23);
 		contentPane.add(btCrearArchivo);
 		
@@ -172,6 +204,9 @@ public class impresionDeArchivo_GUI extends JFrame {
 		JButton btnNewButton = new JButton("Imprimir archivo");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				
+				
 			}
 		});
 		btnNewButton.setBounds(430, 494, 224, 35);
