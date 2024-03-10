@@ -9,7 +9,7 @@
 	//Orden de prioridad: 1-Si el archvio es urgente ,2-Si el archivo es importante pero no tan urgente ,3- Programado para una fecha en especifica
 
 	
-	public archivo(String nomArchivo, String contenido, String nomUsuario, String fechaCrea, String formato, String tamaño) {
+	public archivo(String nomArchivo, String contenido, String nomUsuario, String fechaCrea, String formato, String tamaño, int ordenDePrioridad) {
 		this.nomArchivo = nomArchivo;
 		this.contenido = contenido;
 		this.nomUsuario = nomUsuario;
