@@ -34,8 +34,8 @@ public class impresionDeArchivo_GUI extends JFrame {
 	private JTextField textPrioridad;
 	private JTextField textContenido;
 	private JTextField FondoAzulMarino;
-    private JList JlistArchivosP;
-	private JList JtlistImpresionL;
+   
+	
 	//Modelos del combo box
 	public DefaultComboBoxModel comboTamaño = new DefaultComboBoxModel(); //Combo de tamaño archivo
     public DefaultComboBoxModel comboFormato = new DefaultComboBoxModel(); //combo del formato archivo
@@ -157,7 +157,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 			colaArchivos.add(NuevoArchivo);
 			modelArchivo.addElement(NuevoArchivo.getNomArchivo() + "-" + "Creado el: " + NuevoArchivo.getFechaCrea() + "." + NuevoArchivo.getFormato());
 			
-			JlistArchivosP.setModel(modelArchivo);
+
 			
 			textNomArchivo.setText("");
 			textContenido.setText("");
