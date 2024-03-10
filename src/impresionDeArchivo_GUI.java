@@ -150,6 +150,8 @@ public class impresionDeArchivo_GUI extends JFrame {
 			
 			archivo NuevoArchivo= new archivo(NombreArchivo, Contenido, Fecha, Usuario, Formato, Tamaño, Prioridad);
 			
+			colaArchivos.add(NuevoArchivo);
+			modelArchivo.addElement(NuevoArchivo.getNomArchivo() + "-" + "Creado el: " + NuevoArchivo.getFechaCrea() + "." + NuevoArchivo.getFormato());
 			
 			}
 			
