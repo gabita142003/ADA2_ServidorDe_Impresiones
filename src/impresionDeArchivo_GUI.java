@@ -102,7 +102,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-		
+				JOptionPane.showMessageDialog(null, "Ejemplo: día/mes/año");
 				
 			}
 		});
