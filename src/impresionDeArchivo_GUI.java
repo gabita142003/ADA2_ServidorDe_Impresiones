@@ -24,6 +24,8 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class impresionDeArchivo_GUI extends JFrame {
 
@@ -147,6 +149,14 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(lbFormato_1_1);
 		
 		textPrioridad = new JTextField();
+		textPrioridad.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				
+				
+			}
+		});
 		textPrioridad.setToolTipText("");
 		textPrioridad.setColumns(10);
 		textPrioridad.setBounds(92, 427, 216, 20);
