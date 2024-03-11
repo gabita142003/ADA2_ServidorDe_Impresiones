@@ -144,6 +144,9 @@ public class impresionDeArchivo_GUI extends JFrame {
 					}
 					JOptionPane.showMessageDialog(null, archivosPendientes);
 				}
+				else {
+					JOptionPane.showMessageDialog(null, "Por el momento no hay archivos pendientes en la cola");
+				}
 			}
 		});
 		btnMostrarImpresiones.setBounds(430, 540, 224, 37);
@@ -169,8 +172,6 @@ public class impresionDeArchivo_GUI extends JFrame {
 		textContenido.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Imprimir archivo");
-		
-
 		btnNewButton.setBounds(430, 494, 224, 35);
 		contentPane.add(btnNewButton);
 		
