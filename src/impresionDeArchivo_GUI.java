@@ -141,9 +141,11 @@ public class impresionDeArchivo_GUI extends JFrame {
 					modelArchivo.clear();
 					for  ( archivo archivo : colaArchivos) {
 					    modelArchivo.addElement(archivo.toString());
-					    
 					}
-					}
+				}
+				else {
+				    modelArchivo.addElement("La cola está vacía.");
+				}
 			}
 		});
 		btnMostrarImpresiones.setBounds(430, 540, 224, 37);
