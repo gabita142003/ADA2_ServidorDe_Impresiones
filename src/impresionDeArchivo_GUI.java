@@ -135,6 +135,10 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(JtlistImpresionL);
 		
 		JButton btnMostrarImpresiones = new JButton("Mostrar archivos pendientes");
+		btnMostrarImpresiones.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnMostrarImpresiones.setBounds(430, 540, 224, 37);
 		contentPane.add(btnMostrarImpresiones);
 		
@@ -158,10 +162,8 @@ public class impresionDeArchivo_GUI extends JFrame {
 		textContenido.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Imprimir archivo");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		
+
 		btnNewButton.setBounds(430, 494, 224, 35);
 		contentPane.add(btnNewButton);
 		
