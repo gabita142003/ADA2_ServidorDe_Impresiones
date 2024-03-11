@@ -142,7 +142,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 					for ( archivo archivos : colaArchivos) {
 						archivosPendientes += archivos.toString() +"\n";
 					}
-					
+					JOptionPane.showMessageDialog(null, archivosPendientes);
 				}
 			}
 		});
