@@ -140,7 +140,8 @@ public class impresionDeArchivo_GUI extends JFrame {
 				if (!colaArchivos.isEmpty()) {
 					modelArchivo.clear();
 					for  ( archivo archivo : colaArchivos) {
-						
+					    modelArchivo.addElement(archivo.toString());
+					    
 					}
 					}
 			}
