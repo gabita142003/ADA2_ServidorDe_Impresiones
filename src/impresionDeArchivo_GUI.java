@@ -138,13 +138,9 @@ public class impresionDeArchivo_GUI extends JFrame {
 		btnMostrarImpresiones.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (!colaArchivos.isEmpty()) {
-					modelArchivo.clear();
-					for  ( archivo archivo : colaArchivos) {
-					    modelArchivo.addElement(archivo.toString());
-					}
-				}
-				else {
-				    modelArchivo.addElement("La cola está vacía.");
+					String archivosPendientes= "Archivo en cola: \n";
+					
+					
 				}
 			}
 		});
