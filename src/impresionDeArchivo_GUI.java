@@ -130,6 +130,13 @@ public class impresionDeArchivo_GUI extends JFrame {
 		JlistArchivosP.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent e) {
 				String ArchivoSeleccionado= JlistArchivosP.getSelectedValue().toString();
+				if(!colaArchivos.isEmpty()&&ArchivoSeleccionado !=null) {
+					for(archivo Archivo: colaArchivos) {
+						if(Archivo.getNomArchivo().equals(ArchivoSeleccionado)) {
+							
+						}
+					}
+				}
 			}
 		});
 		JlistArchivosP.setBounds(369, 127, 334, 129);
