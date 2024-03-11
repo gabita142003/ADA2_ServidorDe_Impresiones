@@ -138,7 +138,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 		btnMostrarImpresiones.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (!colaArchivos.isEmpty()) {
-					
+					modelArchivo.clear();
 				}
 			}
 		});
