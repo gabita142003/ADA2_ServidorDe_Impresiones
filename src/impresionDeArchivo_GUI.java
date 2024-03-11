@@ -24,6 +24,8 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class impresionDeArchivo_GUI extends JFrame {
 
@@ -104,6 +106,12 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(lblUsuario);
 		
 		textUsuario = new JTextField();
+		textUsuario.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				JOptionPane.showMessageDialog(null, "Ejemplo de usuario: Nombre@gmail.com o Nombre y apellido");
+			}
+		});
 		textUsuario.setColumns(10);
 		textUsuario.setBounds(92, 301, 216, 20);
 		contentPane.add(textUsuario);
