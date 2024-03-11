@@ -139,7 +139,10 @@ public class impresionDeArchivo_GUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (!colaArchivos.isEmpty()) {
 					modelArchivo.clear();
-				}
+					for  ( archivo archivo : colaArchivos) {
+						
+					}
+					}
 			}
 		});
 		btnMostrarImpresiones.setBounds(430, 540, 224, 37);
