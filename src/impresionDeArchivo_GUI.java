@@ -137,6 +137,9 @@ public class impresionDeArchivo_GUI extends JFrame {
 		JButton btnMostrarImpresiones = new JButton("Mostrar archivos pendientes");
 		btnMostrarImpresiones.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if (!colaArchivos.isEmpty()) {
+					
+				}
 			}
 		});
 		btnMostrarImpresiones.setBounds(430, 540, 224, 37);
