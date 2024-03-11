@@ -134,6 +134,14 @@ public class impresionDeArchivo_GUI extends JFrame {
 					for(archivo Archivo: colaArchivos) {
 						if(Archivo.getNomArchivo().equals(ArchivoSeleccionado)) {
 							
+							textNomArchivo.setText(Archivo.getNomArchivo());
+							textContenido.setText(Archivo.getContenido());;
+							textUsuario.setText(Archivo.getNomUsuario());
+							textFecha.setText(Archivo.getFechaCrea());
+							comboFormato.setSelectedItem(Archivo.getFormato());
+			                comboTamaño.setSelectedItem(Archivo.getTamaño());
+			                textPrioridad.setText(String.valueOf(Archivo.getOrdenDePrioridad()));
+			                break;
 						}
 					}
 				}
