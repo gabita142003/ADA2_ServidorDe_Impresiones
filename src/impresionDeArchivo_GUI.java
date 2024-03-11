@@ -129,7 +129,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 		JList JlistArchivosP = new JList();
 		JlistArchivosP.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent e) {
-				
+				String ArchivoSeleccionado= JlistArchivosP.getSelectedValue().toString();
 			}
 		});
 		JlistArchivosP.setBounds(369, 127, 334, 129);
