@@ -127,6 +127,11 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(comboFormato);
 		
 		JList JlistArchivosP = new JList();
+		JlistArchivosP.addListSelectionListener(new ListSelectionListener() {
+			public void valueChanged(ListSelectionEvent e) {
+				
+			}
+		});
 		JlistArchivosP.setBounds(369, 127, 334, 129);
 		contentPane.add(JlistArchivosP);
 		
