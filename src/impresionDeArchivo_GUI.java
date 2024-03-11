@@ -140,7 +140,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 				if (!colaArchivos.isEmpty()) {
 					String archivosPendientes= "Archivo en cola: \n";
 					for ( archivo archivos : colaArchivos) {
-						
+						archivosPendientes += archivos.toString() +"\n";
 					}
 					
 				}
