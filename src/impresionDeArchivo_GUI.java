@@ -223,6 +223,8 @@ public class impresionDeArchivo_GUI extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				//Se debe dar click dos veces para que se refleje la impresión
+				
 				//ver si la cola de archivos no está vacía
 				 if (!colaArchivos.isEmpty()) {  
 					 String mensajeConfirmacion = "¿Seguro de querer imprimir en orden los archivos?\n"
