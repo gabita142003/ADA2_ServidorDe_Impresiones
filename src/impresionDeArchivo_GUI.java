@@ -129,24 +129,21 @@ public class impresionDeArchivo_GUI extends JFrame {
 		JList JlistArchivosP = new JList();
 		JlistArchivosP.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent e) {
-				String ArchivoSeleccionado= JlistArchivosP.getSelectedValue().toString();
-				if(!colaArchivos.isEmpty()&&ArchivoSeleccionado !=null) {
-					for(archivo Archivo: colaArchivos) {
-						if(Archivo.getNomArchivo().equals(ArchivoSeleccionado)) {
-							
-							textNomArchivo.setText(Archivo.getNomArchivo());
-							textContenido.setText(Archivo.getContenido());;
-							textUsuario.setText(Archivo.getNomUsuario());
-							textFecha.setText(Archivo.getFechaCrea());
-							comboFormato.setSelectedItem(Archivo.getFormato());
-			                comboTamaño.setSelectedItem(Archivo.getTamaño());
-			                textPrioridad.setText(String.valueOf(Archivo.getOrdenDePrioridad()));
-			                break;
-						}
-					}
-				}
-			}
-		});
+				int selectedIndex = JlistArchivosP.getSelectedIndex();
+	            // Obtener el objeto Archivo asociado al índice seleccionado
+	            archivo archivoSeleccionado = (archivo) modelArchivo.getElementAt(selectedIndex);
+	            // Actualizar los campos del formulario con los detalles del archivo seleccionado
+	            textNomArchivo.setText(archivoSeleccionado.getNomArchivo());
+	            textContenido.setText(archivoSeleccionado.getContenido());
+	            textFecha.setText(archivoSeleccionado.getFechaCrea());
+	            textUsuario.setText(archivoSeleccionado.getNomUsuario());
+	            
+	            textPrioridad.setText(String.valueOf(archivoSeleccionado.getOrdenDePrioridad()));
+		
+	}
+	
+
+});
 		JlistArchivosP.setBounds(369, 127, 334, 129);
 		contentPane.add(JlistArchivosP);
 		
@@ -176,7 +173,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 								
 								//Se manda el objeto a la cola y al modelo del jtlist
 								colaArchivos.add(NuevoArchivo);	
-								modelArchivo.addElement(NuevoArchivo.getNomArchivo() +  "-" +  "Creado el: "  + NuevoArchivo.getFechaCrea() + "." + NuevoArchivo.getFormato());
+								modelArchivo.addElement(NuevoArchivo);
 								
 								JlistArchivosP.setModel(modelArchivo);
 								
