@@ -48,6 +48,13 @@ public class impresionDeArchivo_GUI extends JFrame {
     
     
     Queue<archivo> colaArchivos = new PriorityQueue<archivo>();
+    
+          /*Integrantes:
+           * Cruz Gonzalez Alba Gabriela
+           * Dzul Canul Monserrath Carolina
+           * May Chi Cristina Yabila
+           */
+    
     private JTextField textTituloArchivo;
     private JTextField textTituloImpresiones;
     private final JTextField textColorAzul1 = new JTextField();
