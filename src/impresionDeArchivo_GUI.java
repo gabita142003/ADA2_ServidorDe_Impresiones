@@ -138,6 +138,28 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(comboFormato);
 		
 		JList JlistArchivosP = new JList();
+		JlistArchivosP.addListSelectionListener(new ListSelectionListener() {
+			public void valueChanged(ListSelectionEvent e) {
+				//Servira para ver el contenido de cada archivo al darle click
+				int Aseleccion = JlistArchivosP.getSelectedIndex();
+				if (Aseleccion != -1) {
+	            // Obtener el objeto Archivo asociado al índice seleccionado
+	            archivo archivoSeleccionado = (archivo) modelArchivo.getElementAt(Aseleccion);
+	            // Actualizar los campos del formulario con los detalles del archivo seleccionado
+	            if (archivoSeleccionado != null) {
+	            textNomArchivo.setText(archivoSeleccionado.getNomArchivo());
+	            textContenido.setText(archivoSeleccionado.getContenido());
+	            textFecha.setText(archivoSeleccionado.getFechaCrea());
+	            textUsuario.setText(archivoSeleccionado.getNomUsuario());
+	            
+	            textPrioridad.setText(String.valueOf(archivoSeleccionado.getOrdenDePrioridad()));
+		
+	            }
+				}
+			}
+
+
+});
 		JlistArchivosP.setBounds(369, 127, 334, 129);
 		contentPane.add(JlistArchivosP);
 		
@@ -177,7 +199,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 								
 								//Se manda el objeto a la cola y al modelo del jtlist
 								colaArchivos.add(NuevoArchivo);	
-								modelArchivo.addElement(NuevoArchivo.getNomArchivo() +  "-" +  "Creado el: "  + NuevoArchivo.getFechaCrea() + "." + NuevoArchivo.getFormato());
+								modelArchivo.addElement(NuevoArchivo);
 								
 								JlistArchivosP.setModel(modelArchivo);
 								
