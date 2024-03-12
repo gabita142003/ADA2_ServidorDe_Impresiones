@@ -129,9 +129,10 @@ public class impresionDeArchivo_GUI extends JFrame {
 		JList JlistArchivosP = new JList();
 		JlistArchivosP.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent e) {
-				int selectedIndex = JlistArchivosP.getSelectedIndex();
+				//Servira para ver el contenido de cada archivo al darle click
+				int Aseleccion = JlistArchivosP.getSelectedIndex();
 	            // Obtener el objeto Archivo asociado al índice seleccionado
-	            archivo archivoSeleccionado = (archivo) modelArchivo.getElementAt(selectedIndex);
+	            archivo archivoSeleccionado = (archivo) modelArchivo.getElementAt(Aseleccion);
 	            // Actualizar los campos del formulario con los detalles del archivo seleccionado
 	            textNomArchivo.setText(archivoSeleccionado.getNomArchivo());
 	            textContenido.setText(archivoSeleccionado.getContenido());
