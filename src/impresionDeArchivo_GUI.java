@@ -115,6 +115,12 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(lblUsuario);
 		
 		textUsuario = new JTextField();
+		textUsuario.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				JOptionPane.showMessageDialog(null, "Ejemplo de usuario: Nombre@gmail.com o Nombre y apellido");
+			}
+		});
 		textUsuario.setColumns(10);
 		textUsuario.setBounds(92, 301, 216, 20);
 		contentPane.add(textUsuario);
@@ -151,15 +157,15 @@ public class impresionDeArchivo_GUI extends JFrame {
 	            textContenido.setText(archivoSeleccionado.getContenido());
 	            textFecha.setText(archivoSeleccionado.getFechaCrea());
 	            textUsuario.setText(archivoSeleccionado.getNomUsuario());
-	            
 	            textPrioridad.setText(String.valueOf(archivoSeleccionado.getOrdenDePrioridad()));
+	            
 		
 	            }
 				}
 			}
+        
 
-
-});
+	   });
 		JlistArchivosP.setBounds(369, 127, 334, 129);
 		contentPane.add(JlistArchivosP);
 		
@@ -178,6 +184,20 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(JtlistImpresionL);
 		
 		JButton btnMostrarImpresiones = new JButton("Mostrar archivos pendientes");
+		btnMostrarImpresiones.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!colaArchivos.isEmpty()) {
+					String archivosPendientes= "Archivo en cola: \n";
+					for ( archivo archivos : colaArchivos) {
+						archivosPendientes += archivos.toString() +"\n";
+					}
+					JOptionPane.showMessageDialog(null, archivosPendientes);
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "Por el momento no hay archivos pendientes en la cola");
+				}
+			}
+		});
 		btnMostrarImpresiones.setBounds(430, 540, 224, 37);
 		contentPane.add(btnMostrarImpresiones);
 		
@@ -274,6 +294,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 		     }
 			
 		});
+
 		btnNewButton.setBounds(430, 494, 224, 35);
 		contentPane.add(btnNewButton);
 		
