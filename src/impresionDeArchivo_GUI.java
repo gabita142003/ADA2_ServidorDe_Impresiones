@@ -113,7 +113,7 @@ public class impresionDeArchivo_GUI extends JFrame {
 		contentPane.add(lbTamaño);
 		
 		JComboBox comboTamaño = new JComboBox();
-		comboTamaño.setModel(new DefaultComboBoxModel(new String[] {"Carta", "Oficio"}));
+		comboTamaño.setModel(new DefaultComboBoxModel(new String[] {"Carta", "Oficio", "Tabloide", "Ejecutivo"}));
 		comboTamaño.setBounds(97, 344, 211, 22);
 		contentPane.add(comboTamaño);
 		
